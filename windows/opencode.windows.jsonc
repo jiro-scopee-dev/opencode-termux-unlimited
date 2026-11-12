@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "model": "opencode-unlimited-proxy/deepseek-v4.1-flash-free",
+  "provider": {
+    "opencode-unlimited-proxy": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "opencode-unlimited-proxy",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+        "apiKey": "{env:SAKICODE_GATEWAY_KEY}"
+      },
+      "models": {
+        "deepseek-v4.1-flash-free": {},
+        "glm-5.3-flash-free": {},
+        "nemotron-3.5-lightning-free": {},
+        "nemotron-3.5-super-vl-free": {},
+        "flint-40b-free": {},
+        "big-pickle": {},
+        "beam-free": {},
+        "mimo-v2.6-flash-free": {}
+      }
+    }
+  }
+}
