@@ -322,6 +322,7 @@ Example output:
 
 - Maintained by [leangtg123-art](https://github.com/leangtg123-art).
 - Architectural design, reverse-engineering, and enhancements contributed by Discord user **leanianstudio**.
+- Windows launcher add-on (`windows/`) by [JiroDev](https://github.com/jiro-scopee-dev).
 - Powered by [OpenCode](https://opencode.ai) and `opencode2api`.
 
 ---
