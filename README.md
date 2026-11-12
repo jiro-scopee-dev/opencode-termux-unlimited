@@ -15,7 +15,13 @@ Open a **new terminal** after installing so the PATH change takes effect.
 
 ## Install
 
-From the `windows/` folder:
+One line in PowerShell — no clone needed:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/jiro-scopee-dev/opencode-termux-unlimited/main/windows/install.ps1 | iex"
+```
+
+Or from a clone, in the `windows/` folder:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\Install-SakiCode.ps1
