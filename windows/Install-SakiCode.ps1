@@ -35,12 +35,12 @@ $cfg.warp.pool_size = 6
 $cfg.webui.listen = '127.0.0.1:8081'
 if ($cfg.webui.password -eq 'change-this-admin-password') { $cfg.webui.password = [guid]::NewGuid().ToString('N') }
 $cfg | ConvertTo-Json -Depth 30 | Set-Content (Join-Path $proxy 'config.json')
-Copy-Item (Join-Path $PSScriptRoot 'opencode.ps1') (Join-Path $bin 'sakscode.ps1') -Force
+Copy-Item (Join-Path $PSScriptRoot 'opencode.ps1') (Join-Path $bin 'sakicode.ps1') -Force
 Copy-Item (Join-Path $PSScriptRoot 'opencode-proxy.ps1') (Join-Path $bin 'opencode-proxy.ps1') -Force
 Copy-Item (Join-Path $PSScriptRoot 'opencode.windows.jsonc') (Join-Path $root 'opencode.windows.jsonc') -Force
-$cmd = "@echo off`r`npowershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File `"%LOCALAPPDATA%\SakiCode\bin\sakscode.ps1`" %*`r`n"
-Set-Content -Path (Join-Path $bin 'sakscode.cmd') -Value $cmd -Encoding ASCII
+$cmd = "@echo off`r`npowershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File `"%LOCALAPPDATA%\SakiCode\bin\sakicode.ps1`" %*`r`n"
+Set-Content -Path (Join-Path $bin 'sakicode.cmd') -Value $cmd -Encoding ASCII
 $userPath = [Environment]::GetEnvironmentVariable('Path','User')
 $pathEntries = @($userPath -split ';' | Where-Object { $_ -and $_ -ne $bin })
 [Environment]::SetEnvironmentVariable('Path', ((($pathEntries + $bin) -join ';').TrimEnd(';')), 'User')
-Write-Host "Installed SakiCode in $bin. Open a new terminal and run: sakscode"
+Write-Host "Installed SakiCode in $bin. Open a new terminal and run: sakicode"
