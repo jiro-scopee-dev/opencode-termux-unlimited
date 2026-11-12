@@ -1,6 +1,6 @@
 # SakiCode — OpenCode for Windows
 
-A Windows launcher for the OpenCode CLI, with the free-model gateway hooked up and ready to go. Installs into `%LOCALAPPDATA%\SakiCode`, leaves the rest of your system alone, and gives you one command: `sakicode`.
+A Windows launcher for the OpenCode CLI, with the free-model gateway hooked up and ready to go. Installs into `%LOCALAPPDATA%\SakiCode`, leaves the rest of your system alone, and gives you one command: `sakscode`.
 
 ---
 
@@ -27,16 +27,16 @@ Or from a clone, in the `windows/` folder:
 powershell -ExecutionPolicy Bypass -File .\Install-SakiCode.ps1
 ```
 
-This installs OpenCode `1.19.5`, downloads the Windows gateway binary, enables the WARP egress pool, and adds `sakicode` to your user PATH.
+This installs OpenCode `1.19.5`, downloads the Windows gateway binary, enables the WARP egress pool, and adds `sakscode` to your user PATH.
 
 ---
 
 ## Usage
 
 ```powershell
-sakicode            # start OpenCode
-sakicode --help     # normal OpenCode arguments work
-sakicode models
+sakscode            # start OpenCode
+sakscode --help     # normal OpenCode arguments work
+sakscode models
 ```
 
 Paths used by the install:
@@ -44,7 +44,7 @@ Paths used by the install:
 | Path | What it is |
 | :--- | :--- |
 | `%LOCALAPPDATA%\SakiCode\` | install root |
-| `...\bin\sakscode.cmd` | the `sakicode` command |
+| `...\bin\sakscode.cmd` | the `sakscode` command |
 | `...\proxy\config.json` | gateway config (WARP pool, web UI) |
 | `...\opencode.windows.jsonc` | OpenCode provider config |
 

@@ -21,7 +21,7 @@ powershell -ExecutionPolicy Bypass -File .\Install-SakiCode.ps1
 Open a new terminal, then start it with:
 
 ```powershell
-sakicode
+sakscode
 ```
 
 The local gateway uses `127.0.0.1:8080`; its management page is `http://127.0.0.1:8081`.
